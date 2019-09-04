@@ -2,5 +2,36 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="Yane.cpp" />
+    <ClCompile Include="YaneMemory.cpp">
+      <Filter>Yane</Filter>
+    </ClCompile>
+    <ClCompile Include="YaneConsole.cpp">
+      <Filter>Yane</Filter>
+    </ClCompile>
+    <ClCompile Include="YaneCpu.cpp">
+      <Filter>Yane</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Yane">
+      <UniqueIdentifier>{408fc716-6e2c-46d4-b33b-070995cb82e2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="YaneCommon.h">
+      <Filter>Yane</Filter>
+    </ClInclude>
+    <ClInclude Include="YaneMemory.h">
+      <Filter>Yane</Filter>
+    </ClInclude>
+    <ClInclude Include="YaneConsole.h">
+      <Filter>Yane</Filter>
+    </ClInclude>
+    <ClInclude Include="YaneRegisters.h">
+      <Filter>Yane</Filter>
+    </ClInclude>
+    <ClInclude Include="YaneCpu.h">
+      <Filter>Yane</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

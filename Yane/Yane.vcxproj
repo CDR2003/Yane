@@ -107,16 +107,22 @@
     <ClCompile>
       <PrecompiledHeader>
       </PrecompiledHeader>
-      <WarningLevel>Level3</WarningLevel>
+      <WarningLevel>Level4</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>..\SDL\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\SDL\lib\x64</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>copy ..\SDL\lib\x64\SDL2.dll $(TargetDir)</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -158,6 +164,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Yane.cpp" />
+    <ClCompile Include="YaneConsole.cpp" />
+    <ClCompile Include="YaneCpu.cpp" />
+    <ClCompile Include="YaneMemory.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="YaneCommon.h" />
+    <ClInclude Include="YaneConsole.h" />
+    <ClInclude Include="YaneCpu.h" />
+    <ClInclude Include="YaneMemory.h" />
+    <ClInclude Include="YaneRegisters.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
